@@ -512,6 +512,19 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       </div>
       <p class="src">SOURCE: PAXEL BUILDER REPORT · YC · JUN 26 – JUL 26, 2026 · MEASURED, NOT SELF-REPORTED</p>
     </div>
+
+    <div class="card d-card full reveal" style="margin-top:18px">
+      <h3>The AI toolchain — 1.5 years of building only with AI <span class="tag">STACK OF STACKS</span></h3>
+      <ul class="kv">
+        <li><b>Three agents, three jobs:</b> <b>Kiro</b> (AWS) wrote the Elyxis specs — 37 requirements, 13 correctness properties · <b>Antigravity</b> (Google's agentic IDE) built I'm Okay end to end · <b>Claude Code</b> built the Elyxis rebuild — my daily driver, 143 of 147 sessions in the last measured month.</li>
+        <li><b>Models in the loop:</b> Claude Opus 4.6 (thinking) · Google Gemini (Antigravity + I'm Okay's AI care assistant + ideation) · ChatGPT (ideation) · Veo (concept video). <b>Design:</b> Claude Design — 20 signed canvases and a capture→compare→fix fidelity loop; nothing merges until the built screen matches on-device.</li>
+        <li><b>My own machinery — 4 authored AI skills</b> (~85&nbsp;KB of codified process): a build-loop <b>conductor/adjudicator</b> (47&nbsp;KB) · a <b>self-evolving red-team engine</b> (21&nbsp;KB) · a <b>five-phase ecosystem audit</b> (17&nbsp;KB) · a hard-gated <b>session-discipline</b> skill. Plus the Prompt Playbook (P0–P26 build loop), agent hooks that <b>deny writes to secret paths</b>, a post-commit security hook, a read-only design-reviewer subagent, agent memory, overnight batch runs, and swarm experiments (Ruflo architect/coder/reviewer topology) alongside the 35-skill gstack suite.</li>
+        <li><b>A second brain that feeds itself:</b> an Obsidian LLM-maintained wiki (the Karpathy “Memex” pattern) — 40 entities, 74 concepts — filled by an automated capture pipeline: session-end hooks, an hourly sweeper, nightly AI ingest, secret redaction at intake, content-hash dedupe.</li>
+        <li><b>Security tooling:</b> OWASP Top 10 2025 + OWASP LLM Top 10 as standards · gitleaks · bearer · a blocking pre-commit secret hook · six red-team passes carrying 46 tracked engagements.</li>
+        <li><b>Measured by:</b> YC's Paxel — the telemetry above. The discipline is the product.</li>
+      </ul>
+      <p class="qbig">For the past year and a half, every line I've shipped has had an AI agent in the loop. I'm not going back — <em>I only want to work AI-native.</em></p>
+    </div>
   </div>
 </section>
 <section id="amazon">
@@ -617,7 +630,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12.7 10h.05A6.25 6.25 0 0 1 19 16.25V17a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2v-.75A6.25 6.25 0 0 1 11.25 10h.05l-.05-.07A4 4 0 0 1 12 2z"/></svg></span>AI-Native Development</h3>
-        <div class="s-chips"><span class="chip">Claude Code</span><span class="chip">Agentic build workflows</span><span class="chip">LLM guardrails &amp; safety screening</span><span class="chip">AI-assisted test design</span><span class="chip">Prompt-driven protocol design</span></div>
+        <div class="s-chips"><span class="chip">Claude Code<span class="lvl">DAILY</span></span><span class="chip">Antigravity</span><span class="chip">Kiro · spec-driven dev</span><span class="chip">Claude Design</span><span class="chip">Claude API + Gemini integration</span><span class="chip">AI skill authoring ×4</span><span class="chip">Agent hooks &amp; guardrails</span><span class="chip">Multi-agent + swarm runs</span><span class="chip">gstack suite</span><span class="chip">Obsidian LLM second-brain</span><span class="chip">Paxel telemetry</span><span class="chip">LLM safety screening</span><span class="chip">AI-assisted test design</span></div>
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-.42-8.98 6 6 0 1 0-11.06 3.1A4 4 0 0 0 6 19h11.5z"/></svg></span>Cloud, Platforms &amp; Growth</h3>
@@ -663,7 +676,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     <div class="card reveal">
       <p class="eyebrow" style="justify-content:center">Contact</p>
       <h2>Let's build something honest.</h2>
-      <p class="lede" style="margin-inline:auto">I fit anywhere in engineering: <b>backend, full-stack, mobile, QA &amp; test automation, tooling</b>. Open to remote work anywhere; willing to relocate — US (needs visa sponsorship), UK, Dubai / UAE, Australia, New Zealand, Canada, or Delhi. What stays the same wherever I work: tests green before merge, claims the product can back, and things that actually ship.</p>
+      <p class="lede" style="margin-inline:auto">I fit anywhere in engineering: <b>backend, full-stack, mobile, QA &amp; test automation, tooling</b>. Open to remote work anywhere; willing to relocate — US (needs visa sponsorship), UK, Dubai / UAE, Australia, New Zealand, Canada, or Delhi. <b>One non-negotiable: I build AI-native.</b> For the past 1.5 years every line I've shipped has had AI agents in the loop, and I'm looking for teams that work the same way. What stays the same wherever I land: tests green before merge, claims the product can back, and things that actually ship.</p>
       <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built two products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
       <div class="contact-ctas">
         <a class="btn btn-primary" href="mailto:jchakjobs7@gmail.com">jchakjobs7@gmail.com</a>
@@ -715,7 +728,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   }, {passive:true});
 
   /* typewriter roles */
-  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Shipped I'm Okay — live in 40 languages","AI-native builder · Claude Code","Open to backend & full-stack roles"];
+  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Shipped I'm Okay — live in 40 languages","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
   var el = document.getElementById("roleText"), ri=0, ci=0, del=false;
   function type(){
     var w = roles[ri];
