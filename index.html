@@ -241,6 +241,37 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .community{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap}
 .community .chip{padding:9px 16px;font-size:13px}
 
+/* ---------- deep dives ---------- */
+.deep-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+@media(max-width:880px){.deep-grid{grid-template-columns:1fr}}
+.d-card{padding:26px}
+.d-card.full{grid-column:1/-1}
+.d-card h3{font-family:var(--font-d);font-size:17px;margin-bottom:12px;display:flex;gap:9px;align-items:center}
+.d-card h3 .tag{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;color:var(--accent);border:1px solid var(--border2);padding:3px 8px;border-radius:999px}
+.kv{list-style:none;color:var(--ink2);font-size:14.5px}
+.kv li{padding:7px 0 7px 22px;position:relative;border-bottom:1px dashed var(--border)}
+.kv li:last-child{border-bottom:none}
+.kv li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:2px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.kv b{color:var(--ink);font-weight:600}
+.verdict{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:18px;border-radius:14px;border:1px solid color-mix(in srgb,#34D399 35%,transparent);background:color-mix(in srgb,#34D399 7%,transparent);margin-top:8px}
+.verdict b{font-size:22px;color:#34D399}
+.verdict span{font-family:var(--font-m);font-size:12.5px;color:var(--ink2)}
+.linkrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.linkrow a,.linkrow span.creds{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;border:1px solid var(--border2);border-radius:11px;padding:9px 15px;color:var(--ink);transition:.2s;background:var(--surface)}
+.linkrow a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.linkrow a.primary{background:linear-gradient(135deg,var(--accent-deep),#7C5CD6);color:#fff;border-color:transparent;box-shadow:0 6px 20px var(--glow)}
+.linkrow span.creds{font-family:var(--font-m);font-weight:400;font-size:12px;color:var(--ink2);cursor:text}
+.qbig{font-family:var(--font-d);font-size:clamp(19px,2.6vw,25px);font-weight:600;line-height:1.4;color:var(--ink);border-left:3px solid var(--accent);padding-left:20px;margin:26px 0 6px}
+.qbig em{font-style:normal;background:linear-gradient(92deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.smallnote{font-size:12.5px;color:var(--mute);font-style:italic;margin-top:16px}
+.lvl{font-family:var(--font-m);font-size:10px;color:var(--accent);margin-left:6px;letter-spacing:.05em}
+.profile-rows{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 26px;margin-top:22px;position:relative}
+@media(max-width:760px){.profile-rows{grid-template-columns:1fr}}
+.profile-rows .row{font-size:14px;color:var(--ink2);padding:9px 0;border-bottom:1px dashed var(--border)}
+.profile-rows .row b{color:var(--ink);font-weight:600}
+.growth{margin-top:22px;padding:16px 18px;border:1px dashed var(--border2);border-radius:13px;color:var(--ink2);font-size:14px;position:relative}
+.growth b{color:var(--okay)}
+
 /* ---------- contact / footer ---------- */
 #contact .card{margin-top:44px;padding:56px 40px;text-align:center;overflow:hidden}
 #contact .card::before{content:"";position:absolute;inset:-40%;background:radial-gradient(40% 40% at 50% 0%,var(--glow),transparent 70%);pointer-events:none}
@@ -264,8 +295,10 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     <a class="logo" href="#top"><span class="dot"></span>jay chak</a>
     <div class="nav-links" id="navLinks">
       <a href="#work">Products</a>
-      <a href="#build">How I build</a>
-      <a href="#experience">Experience</a>
+      <a href="#elyxis">Elyxis</a>
+      <a href="#imokay">I'm Okay</a>
+      <a href="#build">Paxel</a>
+      <a href="#amazon">Amazon</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
@@ -324,8 +357,8 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         </div>
         <p class="p-desc">An <em>n-of-1 experimentation platform</em>. Pick one change — magnesium for sleep, matcha instead of coffee — and AI designs a proper single-person trial: the right duration, a counterbalanced on/off schedule, one thirty-second question a day. Wearables sync in the background as covariates. At the end, a <em>Bayesian engine returns an honest verdict</em> with credible intervals — and says <em>“no clear effect”</em> when that's the truth. The wellness industry sells certainty it doesn't have; Elyxis is built to tell the truth about your own body.</p>
         <div class="p-stats">
-          <div><b>~1,400</b><span>automated tests</span></div>
-          <div><b>6</b><span>adversarial security reviews</span></div>
+          <div><b>~1,800</b><span>automated tests</span></div>
+          <div><b>6 + 6</b><span>red-team passes + ecosystem audits</span></div>
           <div><b>Jul 2026</b><span>first live Bayesian verdict</span></div>
           <div><b>GDPR</b><span>grade export &amp; deletion</span></div>
         </div>
@@ -360,6 +393,88 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   </div>
 </section>
 
+<section id="elyxis">
+  <div class="wrap">
+    <p class="eyebrow reveal">The flagship — in full</p>
+    <h2 class="reveal">Elyxis, every detail.</h2>
+    <p class="lede reveal">It started personally: a genetic health issue in my family earlier in 2026 left me wanting honest answers about my own body — and every wellness app I tried sold certainty it didn't have. So I built the tool I couldn't buy.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>The loop <span class="tag">PRODUCT</span></h3>
+        <ul class="kv">
+          <li><b>Change one thing</b> — magnesium for sleep, matcha instead of coffee — and rate one outcome daily. About five seconds.</li>
+          <li><b>Claude designs each protocol</b>: the right duration, a counterbalanced on/off schedule, and it narrates the final report in plain English.</li>
+          <li><b>Wearables sync in the background</b> as covariates — sleep, steps — so the model can adjust for confounders.</li>
+          <li><b>A confounder-adjusted regression + Bayesian verdict</b> with credible intervals. Probability is capped at 99% — 100% would be a lie — and it says <b>“no clear effect”</b> when that is the truth.</li>
+        </ul>
+        <div class="verdict"><b>99%</b><span>likely helped · +3.2 sleep points · CI +0.9 to +5.4 · 12 valid days — first live verdict on production data, 25 Jul 2026, with the model refusing to overclaim</span></div>
+      </div>
+
+      <div class="card d-card reveal">
+        <h3>Architecture — built solo <span class="tag">STACK</span></h3>
+        <ul class="kv">
+          <li><b>React Native + Expo</b> — Android and iOS from one codebase.</li>
+          <li><b>Next.js</b> marketing site <b>and operator dashboard</b>.</li>
+          <li><b>Supabase Postgres</b> with row-level security (EU region) + <b>Deno edge functions</b> for orchestration.</li>
+          <li><b>Stateless Python FastAPI statistics service</b> — only de-identified numeric arrays reach it, it retains nothing, and raw samples sit on a 90-day purge schedule.</li>
+          <li><b>Paddle</b> as merchant of record — the live payment path closed its final audit with zero criticals and zero majors.</li>
+          <li><b>The server holds all authority; the client is never trusted.</b> GDPR-grade export and deletion, built in from day one.</li>
+        </ul>
+      </div>
+
+      <div class="card d-card full reveal">
+        <h3>The quality bar — a QA engineer's startup <span class="tag">TESTING</span></h3>
+        <div class="tiles">
+          <div class="tile"><b>~1,800</b><span>automated tests, green before any merge</span></div>
+          <div class="tile"><b>13</b><span>property-based invariants, run at 100+ random iterations</span></div>
+          <div class="tile"><b>6</b><span>report-only red-team passes (OWASP Top 10 2025)</span></div>
+          <div class="tile"><b>6</b><span>ecosystem audits across the whole stack</span></div>
+          <div class="tile"><b>0</b><span>criticals or majors on the live payment path's final audit</span></div>
+          <div class="tile"><b>20</b><span>signed design canvases — nothing merges until the built screen matches, on-device, light &amp; dark</span></div>
+        </div>
+        <p class="qbig">I build by directing AI coding agents — Claude Code as the daily driver. <em>The agents produce, I decide</em>: architecture, scope, security, final acceptance.</p>
+        <div class="linkrow">
+          <a class="primary" href="https://elyxis.app" target="_blank" rel="noopener">elyxis.app ↗</a>
+          <a href="https://elyxis.app/vision" target="_blank" rel="noopener">16-phase roadmap ↗</a>
+          <a href="https://github.com/jchak7/elyxis-download/releases/latest/download/elyxis-latest.apk">Download the Android APK ⬇</a>
+          <span class="creds">demo login: yc-demo@elyxis.app · Test@7024#</span>
+        </div>
+        <p class="smallnote">Public launch is weeks out — Y Combinator Fall 2026 applicant. The demo account is sandboxed; poke around.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="imokay">
+  <div class="wrap">
+    <p class="eyebrow reveal">Shipped first</p>
+    <h2 class="reveal">I'm Okay, every detail.</h2>
+    <p class="lede reveal">The first product — designed and shipped alone in about six months, alongside the day job. Live on Android and iOS, in 40 languages, from ₹0 to ₹299 across five tiers.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>What it does <span class="tag">PRODUCT</span></h3>
+        <ul class="kv">
+          <li><b>Confirm you're okay on a schedule.</b> Miss it, and your trusted contacts get told — through a plan-aware escalation pipeline (email on free, WhatsApp on paid).</li>
+          <li><b>No countdowns, no urgency cues, no tracking.</b> The interface avoids alarm on purpose: the point is reassurance, not panic.</li>
+          <li><b>Shipped features:</b> caregiver portal · meal, medicine &amp; water tracking · weekly PDF report over WhatsApp · AI care assistant · Emergency SOS.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Engineering <span class="tag">STACK</span></h3>
+        <ul class="kv">
+          <li><b>Node + Express API on Postgres holds all authority</b> — the client never makes a safety decision on its own.</li>
+          <li><b>Next.js PWA + Capacitor wrappers</b> for the stores, plus a <b>separate, fully native Kotlin / Jetpack Compose Android app</b> — built because Android throttles background work on a PWA, and the alarm has to fire anyway.</li>
+          <li><b>Redis locking, an orchestrator running 18+ background workers</b>, and every alert delivered <b>exactly once</b> through a registry-first outbox.</li>
+          <li><b>Server time only</b> — client clocks are never trusted.</li>
+        </ul>
+        <div class="linkrow"><a class="primary" href="https://imokay.in" target="_blank" rel="noopener">imokay.in ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="build">
   <div class="wrap">
     <p class="eyebrow reveal">How I build</p>
@@ -382,10 +497,80 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <span class="pattern">Audit Completeness</span>
       </div>
       <p class="paxel-note">Paxel profiled me as an <b>“architect-controller”</b>: challenges premises, demands production parity, enforces hard safety gates — and <b>converts AI output into bounded, verified engineering work</b>. Speed is easy with AI; the discipline to keep it honest is the actual skill.</p>
-      <p class="src">SOURCE: PAXEL BUILDER REPORT · YC · JUN 26 – JUL 26, 2026</p>
+      <div class="profile-rows">
+        <div class="row"><b>Decision focus:</b> 123 of 152 recorded decisions were architectural — trust boundaries, data ownership, migrations.</div>
+        <div class="row"><b>Tooling:</b> Claude Code in 143 of 147 sessions, running up to 3 agent instances concurrently.</div>
+        <div class="row"><b>Prompting:</b> 863-word average prompt, ~8 prompts per session; 12% of code sessions open with an explicit plan.</div>
+        <div class="row"><b>Course control:</b> only 6% mid-task redirects — briefs are written so agents rarely need steering mid-flight.</div>
+        <div class="row"><b>AI-usage fingerprint:</b> Frame Breaker ×23 · Architect's Veto ×14 · Cognitive Breadth ×6 · Dances with Robots ×4.</div>
+        <div class="row"><b>Domains that month:</b> mobile auth · web settings · biomarker reporting · payment hardening · security passes · analytics · design sync · infra migrations.</div>
+      </div>
+      <div class="growth reveal"><b>What Paxel says I should fix</b> — kept here on purpose, because the honesty brand includes me: tighter targeting on exploratory audits · the codebase grows faster than it simplifies (0.07 deletion ratio) · close the loop on outcomes (41 of 152 interventions had verified positive results at report time).</div>
+      <div class="linkrow">
+        <a class="primary" href="https://paxel.ycombinator.com/results/hdoy4xgo" target="_blank" rel="noopener">View the live Paxel report ↗</a>
+        <a href="https://paxel.ycombinator.com/results/hdoy4xgo/v3" target="_blank" rel="noopener">v3 report ↗</a>
+      </div>
+      <p class="src">SOURCE: PAXEL BUILDER REPORT · YC · JUN 26 – JUL 26, 2026 · MEASURED, NOT SELF-REPORTED</p>
     </div>
   </div>
 </section>
+<section id="amazon">
+  <div class="wrap">
+    <p class="eyebrow reveal">The day job — in full</p>
+    <h2 class="reveal">Amazon, every detail.</h2>
+    <p class="lede reveal">Quality engineering for Amazon apps, services and devices since Feb 2022. Before a release I write and run the coverage — manual passes and automated scripts; when something fails I reproduce it, find the actual cause, log it, and stay on it until it's fixed inside the team's SLAs. A good part of the job is automation: maintaining the pre-release suites, separating real defects from flaky tests, and building the scripts and tools that take repetitive work out of the day.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>Competitive parity &amp; performance benchmarking <span class="tag">FLAGSHIP</span></h3>
+        <ul class="kv">
+          <li>Benchmarked <b>75+ top streaming apps</b> on Fire TV against <b>Apple TV, Google TV and Roku</b> across five quarterly cycles — end-to-end: launch, Live TV, voice, universal search, sign-in, discoverability, IAP parity.</li>
+          <li>Logged <b>350+ customer-experience disparities</b>, <b>60+ of them P0</b>, tracked in JIRA with the platform team; fixes landed in-quarter.</li>
+          <li>Cycle by cycle: <b>Q2 — 11 apps / 14 gaps · Q3 — 21 / 129 · Q4 — 11 / 94 · Apple TV Q3–Q4 — 10 / 87 · Q1'23 — 22 / 34</b>. Took on Apple TV coverage on my own initiative when the team was short-handed.</li>
+          <li>Ran a <b>back-button UX study across 20 P0 apps</b> — worst offenders took 12 clicks to exit an app.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Live content quality ops <span class="tag">DAILY OWNERSHIP</span></h3>
+        <ul class="kv">
+          <li>Owned daily quality for <b>300+ live news channels</b> on Fire TV's news platform: blank screens, audio distortion, buffering, delivery failures — escalated same-day, inside SLA.</li>
+          <li>Enforced <b>content-freshness thresholds</b> (e.g. three uploads per four-day window per channel), chasing providers on misses and tuning trailing configs to kill false-positive tickets.</li>
+          <li>Added <b>ad-load validation</b>: whether ads load, how long they run, how many appear per video — balancing user experience against revenue compliance.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Audits &amp; the quality bar <span class="tag">CoE</span></h3>
+        <ul class="kv">
+          <li>Audited <b>200+ app policy decisions</b> as part of the audit function, catching <b>50+ tester mismatches</b> and coaching peers on the patterns behind them.</li>
+          <li>Sustained personal quality <b>at or above 100% of the team benchmark</b> for consecutive months; multiple <b>Spot Awards and Jedi Ranger Awards</b>.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Platform integrity <span class="tag">FRAUD</span></h3>
+        <ul class="kv">
+          <li>Spotted a <b>paid-app scam pattern</b> among YouTube channel-creator apps — developers monetizing free content — which triggered <b>verification of every paid channel-creator app</b> in the catalog.</li>
+          <li>Contributed to the team's enforcement waves that removed <b>thousands of fraudulent vendor accounts and non-compliant apps</b>, including illegal IPTV streaming apps.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Catalog &amp; developer experience <span class="tag">SELECTION</span></h3>
+        <ul class="kv">
+          <li>Devised an <b>APK pre-testing mechanism and SOP</b> to validate Play-Store apps' Fire TV compatibility before onboarding — feeding a <b>multi-million-dollar catalog selection program</b> and closing the gap with third-party app stores.</li>
+          <li>Resolved <b>100+ third-party developer support cases</b> end-to-end in Amazon's partner CRM.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Automation &amp; enablement <span class="tag">TOOLING</span></h3>
+        <ul class="kv">
+          <li>Part of the team's automation initiative: <b>Maestro UI suites across the top-40 catalog apps</b>, an automated results pipeline covering <b>500+ apps (~85% manual effort cut)</b>, review processing brought from <b>10–15 minutes to 6.3 seconds</b>, and SDK compatibility analysis across the top-200 list.</li>
+          <li>Built <b>7+ operational SOPs</b> (including their HTML backends), the team newsletter, and the training visuals that cut decision mismatches across the team.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="smallnote reveal">Internal program codenames and confidential figures are deliberately left off this public page; the full picture with sourcing lives in my résumé and interview answers.</p>
+  </div>
+</section>
+
 <section id="experience">
   <div class="wrap">
     <p class="eyebrow reveal">Experience</p>
@@ -402,8 +587,8 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         </ul>
       </div>
       <div class="t-item reveal">
-        <div class="t-head"><span class="t-role">Founder &amp; CEO</span><span class="t-co">LeadShala</span><span class="t-date">AUG 2020 — PRESENT</span></div>
-        <p class="t-body">Bootstrapped a performance-marketing company solo; served local service businesses in four countries; evolved it into the parent company of Elyxis and I'm Okay.</p>
+        <div class="t-head"><span class="t-role">Founder &amp; CEO</span><span class="t-co">LeadShala Digital Media</span><span class="t-date">AUG 2020 — PRESENT</span></div>
+        <p class="t-body">MSME-registered in India as a sole proprietorship. Performance marketing on retainer, backed by a 30-day money-back guarantee — and every function done myself: a ten-question niche filter I wrote, finding owners on Instagram, closing on Zoom, building the landing pages, running the Meta and Google ads. Niches: home services, wedding planning, senior care, furniture retail — across India, the US, the UK and Australia. Since 2026, the company behind I'm Okay and Elyxis.</p>
       </div>
       <div class="t-item reveal">
         <div class="t-head"><span class="t-role">Campus Ambassador</span><span class="t-co">IIM Bangalore · Vista '21</span><span class="t-date">JUN — AUG 2021</span></div>
@@ -428,7 +613,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>Programming &amp; Data</h3>
-        <div class="s-chips"><span class="chip">Java</span><span class="chip">C++</span><span class="chip">SQL · MS SQL Server</span><span class="chip">HTML / CSS</span><span class="chip">JavaScript / TypeScript</span><span class="chip">Python</span><span class="chip">Linux</span></div>
+        <div class="s-chips"><span class="chip">React Native<span class="lvl">ADV</span></span><span class="chip">TypeScript<span class="lvl">INT</span></span><span class="chip">Node.js<span class="lvl">INT</span></span><span class="chip">Python<span class="lvl">INT</span></span><span class="chip">PostgreSQL<span class="lvl">INT</span></span><span class="chip">Next.js<span class="lvl">INT</span></span><span class="chip">Android<span class="lvl">INT</span></span><span class="chip">React<span class="lvl">INT</span></span><span class="chip">Kotlin<span class="lvl">BEG</span></span><span class="chip">iOS<span class="lvl">BEG</span></span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Linux</span></div>
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12.7 10h.05A6.25 6.25 0 0 1 19 16.25V17a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2v-.75A6.25 6.25 0 0 1 11.25 10h.05l-.05-.07A4 4 0 0 1 12 2z"/></svg></span>AI-Native Development</h3>
@@ -478,7 +663,8 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     <div class="card reveal">
       <p class="eyebrow" style="justify-content:center">Contact</p>
       <h2>Let's build something honest.</h2>
-      <p class="lede" style="margin-inline:auto">Hiring for QA, quality engineering, or founder-minded builders — or just curious about Elyxis? My inbox is open.</p>
+      <p class="lede" style="margin-inline:auto">I fit anywhere in engineering: <b>backend, full-stack, mobile, QA &amp; test automation, tooling</b>. Open to remote work anywhere; willing to relocate — US (needs visa sponsorship), UK, Dubai / UAE, Australia, New Zealand, Canada, or Delhi. What stays the same wherever I work: tests green before merge, claims the product can back, and things that actually ship.</p>
+      <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built two products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
       <div class="contact-ctas">
         <a class="btn btn-primary" href="mailto:jchakjobs7@gmail.com">jchakjobs7@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/jaychak/" target="_blank" rel="noopener">LinkedIn</a>
@@ -529,7 +715,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   }, {passive:true});
 
   /* typewriter roles */
-  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Shipped I'm Okay — live in 40 languages","AI-native builder · Claude Code"];
+  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Shipped I'm Okay — live in 40 languages","AI-native builder · Claude Code","Open to backend & full-stack roles"];
   var el = document.getElementById("roleText"), ri=0, ci=0, del=false;
   function type(){
     var w = roles[ri];
