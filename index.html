@@ -157,12 +157,14 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .p-elyxis{grid-column:span 12}
 .p-okay{grid-column:span 6}
 .p-lead{grid-column:span 6}
+.p-glass{grid-column:span 12}
 @media(max-width:880px){.p-okay,.p-lead{grid-column:span 12}}
 .p-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .p-mark{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-family:var(--font-d);font-weight:700;font-size:19px;color:#fff;flex:none}
 .m-elyxis{background:linear-gradient(135deg,#5E6AD2,#22D3EE)}
 .m-okay{background:linear-gradient(135deg,#F36C21,#F5A05B)}
 .m-lead{background:linear-gradient(135deg,#334155,#64748B)}
+.m-glass{background:linear-gradient(135deg,#10B981,#06B6D4)}
 .p-name{font-family:var(--font-d);font-weight:700;font-size:22px}
 .p-tag{font-size:13.5px;color:var(--mute)}
 .badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -180,6 +182,8 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .p-card:hover .p-link svg{transform:translate(3px,-3px)}
 .p-elyxis::before{content:"";position:absolute;top:-120px;right:-80px;width:340px;height:340px;border-radius:50%;
   background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
+.p-glass::before{content:"";position:absolute;top:-130px;right:-70px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,#10B981 16%,transparent),transparent 70%);pointer-events:none}
 .p-okay::before{content:"";position:absolute;top:-120px;right:-90px;width:300px;height:300px;border-radius:50%;
   background:radial-gradient(circle,rgba(243,108,33,.16),transparent 65%);pointer-events:none}
 
@@ -297,6 +301,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     <div class="nav-links" id="navLinks">
       <a href="#work">Products</a>
       <a href="#elyxis">Elyxis</a>
+      <a href="#glassbox">GlassBox</a>
       <a href="#imokay">I'm Okay</a>
       <a href="#build">Paxel</a>
       <a href="#amazon">Amazon</a>
@@ -315,7 +320,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <p class="hello">Bengaluru, India · QA engineer by day, founder by night</p>
         <h1>I build honest<br>consumer products.<br><span class="grad">And I test everything.</span></h1>
         <p class="roles"><span id="roleText"></span><span class="caret"></span></p>
-        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
+        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>, and the builder of <strong>GlassBox</strong>, a browser agent you can watch and steer. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://jchak7.github.io/portfolio/Jay_Chak_Resume.pdf" download="Jay_Chak_Resume.pdf" target="_blank" rel="noopener">Download résumé
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
@@ -337,7 +342,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     </div>
     <div class="hero-stats">
       <div class="stat reveal"><b><em data-count="4.5">0</em>+ yrs</b><span>QA at Amazon — Appstore &amp; Fire TV</span></div>
-      <div class="stat reveal"><b><em data-count="2">0</em> products</b><span>designed, built &amp; shipped end-to-end</span></div>
+      <div class="stat reveal"><b><em data-count="3">0</em> products</b><span>designed, built &amp; shipped end-to-end</span></div>
       <div class="stat reveal"><b><em data-count="40">0</em> languages</b><span>built into I'm Okay — Android &amp; iOS</span></div>
       <div class="stat reveal"><b><em data-count="28">0</em>K followers</b><span>LinkedIn audience built from zero</span></div>
     </div>
@@ -346,7 +351,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 <section id="work">
   <div class="wrap">
     <p class="eyebrow reveal">Founder products</p>
-    <h2 class="reveal">Two products, end to end.<br>Both built to tell the truth.</h2>
+    <h2 class="reveal">Three products, end to end.<br>All built to tell the truth.</h2>
     <p class="lede reveal">Designed, engineered and tested end-to-end — with Claude Code as my AI pair-programmer, and QA discipline from four-plus years at Amazon baked into every release.</p>
 
     <div class="bento">
@@ -364,9 +369,29 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <div><b>GDPR</b><span>grade export &amp; deletion</span></div>
         </div>
         <div class="p-chips">
-          <span class="chip">React Native + Expo</span><span class="chip">Next.js</span><span class="chip">Supabase · Postgres + RLS (EU)</span><span class="chip">Python · Bayesian stats</span><span class="chip">AWS Lambda</span><span class="chip">Claude API</span><span class="chip">Paddle billing</span>
+          <span class="chip">React Native + Expo</span><span class="chip">Next.js</span><span class="chip">Supabase · Postgres + RLS (EU)</span><span class="chip">Python · Bayesian stats</span><span class="chip">Railway</span><span class="chip">Claude API</span><span class="chip">Paddle billing</span>
         </div>
         <a class="p-link" href="https://elyxis.app" target="_blank" rel="noopener">elyxis.app <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+
+
+      <div class="card p-card p-glass reveal">
+        <div class="p-top">
+          <div class="p-mark m-glass">GB</div>
+          <div><div class="p-name">GlassBox</div><div class="p-tag">A browser agent you can actually watch — and stop</div></div>
+          <div class="badges"><span class="badge hot">Live · public repo</span><span class="badge">Built in one day</span></div>
+        </div>
+        <p class="p-desc">Give it a goal in plain English and it drives a real browser to get it done — planning each step with an LLM in the loop, then navigating, reading, clicking, extracting and filling. The part I actually cared about: <em>you can see every move it makes and take the wheel at any moment</em>. Reasoning, the chosen action and a live screenshot of the page stream to the interface as it happens; a timeline rail marks each step green when it lands, red when it fails, and <em>blue when a human stepped in</em>. Most agents are a spinner and a shrug. This one shows its work — hence the name.</p>
+        <div class="p-stats">
+          <div><b>1 day</b><span>concept to deployed, solo</span></div>
+          <div><b>14/14</b><span>rows verified on the proven extraction run</span></div>
+          <div><b>0</b><span>silent failures — every stall is diagnosed out loud</span></div>
+          <div><b>Public</b><span>limitations doc + adversarial suite in the repo</span></div>
+        </div>
+        <div class="p-chips">
+          <span class="chip">Playwright</span><span class="chip">Python · FastAPI</span><span class="chip">WebSocket streaming</span><span class="chip">LLM plan/act loop</span><span class="chip">Claude API</span><span class="chip">Railway</span><span class="chip">Glassmorphism UI</span>
+        </div>
+        <a class="p-link" href="https://glassbox-production-d5f7.up.railway.app/?v=verify" target="_blank" rel="noopener">try it live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
       </div>
 
       <div class="card p-card p-okay reveal">
@@ -442,6 +467,74 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <span class="creds">demo login: yc-demo@elyxis.app · Test@7024#</span>
         </div>
         <p class="smallnote">Public launch is weeks out — Y Combinator Fall 2026 applicant. The demo account is sandboxed; poke around.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="glassbox">
+  <div class="wrap">
+    <p class="eyebrow reveal">Newest build — in full</p>
+    <h2 class="reveal">GlassBox, every detail.</h2>
+    <p class="lede reveal">I kept watching AI agents do impressive things behind a loading spinner, and realised the hard problem isn't autonomy — it's trust. If a person can't see what an agent is doing, they can't correct it, and they won't use it for anything that matters. So I built the agent I'd actually let near real work: one that narrates every decision and hands you the wheel whenever you want it.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>What it does <span class="tag">PRODUCT</span></h3>
+        <ul class="kv">
+          <li><b>A goal in plain English</b> — no scripts, no selectors, no recorded macros. You type what you want.</li>
+          <li><b>The model plans and acts, step by step</b>: navigate, read, click, extract, fill. Each action is chosen at runtime from what's actually on the page, then re-planned from the result.</li>
+          <li><b>Everything streams live</b> — the reasoning behind each step, the action taken, and a screenshot of the page as it stood. Over WebSocket, as it happens.</li>
+          <li><b>You can stop it, approve a step, or step in yourself</b> at any point, and the run picks up from where you left it.</li>
+          <li><b>It ends with a clean, structured result</b> — a table, a brief, a confirmation — not a wall of logs.</li>
+        </ul>
+        <div class="verdict"><b>14/14</b><span>rows extracted and verified on the proven invoice run — executed twice, end to end, against the live model</span></div>
+      </div>
+
+      <div class="card d-card reveal">
+        <h3>Architecture — built solo <span class="tag">STACK</span></h3>
+        <ul class="kv">
+          <li><b>Playwright</b> driving a real Chromium session server-side — a genuine browser, not a fetch-and-parse imitation.</li>
+          <li><b>Python + FastAPI</b> backend running the plan/act loop and orchestrating the model.</li>
+          <li><b>WebSocket step-streaming</b> pushes reasoning, action and screenshot to the UI the moment each occurs.</li>
+          <li><b>Claude API</b> as the reasoning layer, with the loop re-planning against real page state after every step.</li>
+          <li><b>Railway</b> for deployment, with a <b>version marker baked into the backend</b> so a deploy is <em>confirmed</em>, never inferred from a page that might be cached.</li>
+          <li><b>Design and build directed end to end by me</b> — Claude Design for the interface language, Claude Code for implementation, every architectural and acceptance call mine.</li>
+        </ul>
+      </div>
+
+      <div class="card d-card full reveal">
+        <h3>The interface is the product <span class="tag">DESIGN</span></h3>
+        <p class="qbig">An agent is only as useful as your ability to see what it's doing and take it back. So the interface got the most attention, not the least.</p>
+        <ul class="kv">
+          <li><b>A timeline rail with numbered nodes</b> — green when a step lands, red when it fails, <b>blue when a human intervened</b>, and a pulsing node while it's mid-action. The whole run is legible at a glance, after the fact as well as during.</li>
+          <li><b>Glass panels on a deep-space grid</b>, mint accent with state-coloured glows, JetBrains Mono and Instrument Sans — built so a non-technical person watching over your shoulder can follow along.</li>
+          <li><b>Failure is narrated, never swallowed.</b> When a run can't proceed, it says exactly what blocked it and why, in words a person can act on.</li>
+        </ul>
+        <div class="tiles">
+          <div class="tile"><b>1 day</b><span>concept to deployed and public, solo</span></div>
+          <div class="tile"><b>3</b><span>working task presets, each honest about its own status</span></div>
+          <div class="tile"><b>0</b><span>silent failures — every stall is diagnosed out loud</span></div>
+          <div class="tile"><b>Public</b><span>LIMITATIONS doc shipped in the repo, not hidden</span></div>
+          <div class="tile"><b>Prompt</b><span>injection suite — the failure mode unique to browser agents</span></div>
+          <div class="tile"><b>Runnable</b><span>adversarial tests anyone can execute themselves</span></div>
+        </div>
+      </div>
+
+      <div class="card d-card full reveal">
+        <h3>How I test an agent I don't fully control <span class="tag">TESTING</span></h3>
+        <ul class="kv">
+          <li><b>Prompt injection first.</b> A browser agent reads text from pages it doesn't own — so a page can try to talk to it. That's the failure mode specific to this class of software, and it's where the adversarial suite starts.</li>
+          <li><b>Runnable proof over prose.</b> Claims in a README are cheap; the test suite ships in the repo so anyone can run it against the deployment and see for themselves.</li>
+          <li><b>Limitations published by me, up front.</b> One preset targets a source that blocks datacenter IP ranges outright. Rather than quietly dropping it, the agent detects it, names the cause correctly, and the constraint is documented in the repo. Surfacing your own limitation reads as engineering maturity; letting someone else find it reads as a gap you missed.</li>
+          <li><b>An engineering journal alongside the code</b> — decisions, dead ends, and what changed my mind, written as I went.</li>
+        </ul>
+        <p class="qbig">Four and a half years of QA taught me the useful reflex here: the interesting bug is the one that looks like it worked. Twice during this build, “deployed” actually meant “stale cache” — which is exactly why the version marker exists.</p>
+        <div class="linkrow">
+          <a class="primary" href="https://glassbox-production-d5f7.up.railway.app/?v=verify" target="_blank" rel="noopener">Try GlassBox live ↗</a>
+          <a href="https://github.com/jchak7/glassbox" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+        <p class="smallnote">Public and inspectable — the repo carries the limitations doc, the adversarial suite and the engineering journal.</p>
       </div>
     </div>
   </div>
@@ -631,11 +724,11 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12.7 10h.05A6.25 6.25 0 0 1 19 16.25V17a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2v-.75A6.25 6.25 0 0 1 11.25 10h.05l-.05-.07A4 4 0 0 1 12 2z"/></svg></span>AI-Native Development</h3>
-        <div class="s-chips"><span class="chip">Claude Code<span class="lvl">DAILY</span></span><span class="chip">Antigravity</span><span class="chip">Kiro · spec-driven dev</span><span class="chip">Claude Design</span><span class="chip">Claude API + Gemini integration</span><span class="chip">AI skill authoring ×4</span><span class="chip">Agent hooks &amp; guardrails</span><span class="chip">Multi-agent + swarm runs</span><span class="chip">gstack suite</span><span class="chip">Obsidian LLM second-brain</span><span class="chip">Paxel telemetry</span><span class="chip">Prompt engineering</span><span class="chip">MCP integration</span><span class="chip">LLM safety screening</span><span class="chip">AI-assisted test design</span></div>
+        <div class="s-chips"><span class="chip">Claude Code<span class="lvl">DAILY</span></span><span class="chip">Antigravity</span><span class="chip">Kiro · spec-driven dev</span><span class="chip">Claude Design</span><span class="chip">Claude API + Gemini integration</span><span class="chip">AI skill authoring ×4</span><span class="chip">Agent hooks &amp; guardrails</span><span class="chip">Multi-agent + swarm runs</span><span class="chip">gstack suite</span><span class="chip">Obsidian LLM second-brain</span><span class="chip">Paxel telemetry</span><span class="chip">Prompt engineering</span><span class="chip">MCP integration</span><span class="chip">LLM safety screening</span><span class="chip">AI-assisted test design</span><span class="chip">Browser agents · Playwright + LLM loop</span><span class="chip">Agent plan/act orchestration</span><span class="chip">Human-in-the-loop agent UX</span><span class="chip">Prompt-injection testing</span><span class="chip">Agent observability &amp; step streaming</span></div>
       </div>
       <div class="card s-group reveal">
         <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-.42-8.98 6 6 0 1 0-11.06 3.1A4 4 0 0 0 6 19h11.5z"/></svg></span>Cloud, Platforms &amp; Growth</h3>
-        <div class="s-chips"><span class="chip">Supabase · Postgres + RLS</span><span class="chip">Railway</span><span class="chip">FastAPI + statsmodels</span><span class="chip">Deno edge functions</span><span class="chip">React Native + Expo/EAS</span><span class="chip">Capacitor</span><span class="chip">Jetpack Compose · Room · WorkManager</span><span class="chip">Health Connect</span><span class="chip">Redis</span><span class="chip">Paddle · Stripe · Razorpay · Apple IAP</span><span class="chip">WhatsApp Business API</span><span class="chip">Sentry · PostHog</span><span class="chip">Git / GitHub</span><span class="chip">Google Ads · Meta Ads</span><span class="chip">Programmatic SEO</span></div>
+        <div class="s-chips"><span class="chip">Supabase · Postgres + RLS</span><span class="chip">Railway</span><span class="chip">FastAPI + statsmodels</span><span class="chip">Deno edge functions</span><span class="chip">React Native + Expo/EAS</span><span class="chip">Capacitor</span><span class="chip">Jetpack Compose · Room · WorkManager</span><span class="chip">Health Connect</span><span class="chip">Redis</span><span class="chip">Paddle · Stripe · Razorpay · Apple IAP</span><span class="chip">WhatsApp Business API</span><span class="chip">WebSockets · live streaming</span><span class="chip">Playwright · headless Chromium</span><span class="chip">Sentry · PostHog</span><span class="chip">Git / GitHub</span><span class="chip">Google Ads · Meta Ads</span><span class="chip">Programmatic SEO</span></div>
       </div>
     </div>
 
@@ -721,7 +814,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   }, {passive:true});
 
   /* typewriter roles */
-  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
+  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","Built GlassBox — a steerable browser agent","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
   var el = document.getElementById("roleText"), ri=0, ci=0, del=false;
   function type(){
     var w = roles[ri];
