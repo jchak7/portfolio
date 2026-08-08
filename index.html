@@ -158,6 +158,7 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .p-okay{grid-column:span 6}
 .p-lead{grid-column:span 6}
 .p-glass{grid-column:span 12}
+.p-patch{grid-column:span 12}
 @media(max-width:880px){.p-okay,.p-lead{grid-column:span 12}}
 .p-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .p-mark{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-family:var(--font-d);font-weight:700;font-size:19px;color:#fff;flex:none}
@@ -165,6 +166,7 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .m-okay{background:linear-gradient(135deg,#F36C21,#F5A05B)}
 .m-lead{background:linear-gradient(135deg,#334155,#64748B)}
 .m-glass{background:linear-gradient(135deg,#10B981,#06B6D4)}
+.m-patch{background:linear-gradient(135deg,#6366F1,#A855F7)}
 .p-name{font-family:var(--font-d);font-weight:700;font-size:22px}
 .p-tag{font-size:13.5px;color:var(--mute)}
 .badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -186,6 +188,8 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
   background:radial-gradient(circle,color-mix(in srgb,#10B981 16%,transparent),transparent 70%);pointer-events:none}
 .p-okay::before{content:"";position:absolute;top:-120px;right:-90px;width:300px;height:300px;border-radius:50%;
   background:radial-gradient(circle,rgba(243,108,33,.16),transparent 65%);pointer-events:none}
+.p-patch::before{content:"";position:absolute;top:-130px;right:-70px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,#6366F1 18%,transparent),transparent 70%);pointer-events:none}
 
 /* ---------- how I build ---------- */
 #build .panel{margin-top:44px;padding:34px;border-radius:22px;border:1px solid var(--border);background:var(--surface);position:relative;overflow:hidden}
@@ -302,6 +306,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <a href="#work">Products</a>
       <a href="#elyxis">Elyxis</a>
       <a href="#glassbox">GlassBox</a>
+      <a href="#patchbay">Patchbay</a>
       <a href="#imokay">I'm Okay</a>
       <a href="#build">Paxel</a>
       <a href="#amazon">Amazon</a>
@@ -320,7 +325,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <p class="hello">Bengaluru, India · QA engineer by day, founder by night</p>
         <h1>I build honest<br>consumer products.<br><span class="grad">And I test everything.</span></h1>
         <p class="roles"><span id="roleText"></span><span class="caret"></span></p>
-        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>, and the builder of <strong>GlassBox</strong>, a browser agent you can watch and steer. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
+        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>, and the builder of <strong>GlassBox</strong>, a browser agent you can watch and steer, and <strong>Patchbay</strong>, a visual pipeline builder. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://jchak7.github.io/portfolio/Jay_Chak_Resume.pdf" download="Jay_Chak_Resume.pdf" target="_blank" rel="noopener">Download résumé
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
@@ -392,6 +397,25 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <span class="chip">Playwright</span><span class="chip">Python · FastAPI</span><span class="chip">WebSocket streaming</span><span class="chip">LLM plan/act loop</span><span class="chip">Claude API</span><span class="chip">Railway</span><span class="chip">Glassmorphism UI</span>
         </div>
         <a class="p-link" href="https://glassbox-production-d5f7.up.railway.app/?v=verify" target="_blank" rel="noopener">try it live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+
+      <div class="card p-card p-patch reveal">
+        <div class="p-top">
+          <div class="p-mark m-patch">Pb</div>
+          <div><div class="p-name">Patchbay</div><div class="p-tag">Wire an AI pipeline by dragging boxes</div></div>
+          <div class="badges"><span class="badge hot">Open source</span><span class="badge">Full-stack</span></div>
+        </div>
+        <p class="p-desc">A <em>visual pipeline builder</em>: drag typed nodes onto a canvas, wire the ports together, and an LLM workflow takes shape — the same way you'd patch signal through a studio rack, which is where the name comes from. The part I actually cared about is the <em>node system underneath</em>. Every node type — input, model, filter, an HTTP request, a note — is described as one small object: its fields, its ports, its colour. A shared factory turns that object into a working node, so <em>adding a whole new node type is a few lines, not a new component</em>. I built the front end, the dark design system, and the backend that checks the graph is valid — no loops — before it can run.</p>
+        <div class="p-stats">
+          <div><b>~8 lines</b><span>to add a brand-new node type</span></div>
+          <div><b>9</b><span>node types on one abstraction</span></div>
+          <div><b>DAG</b><span>graph validated before it runs</span></div>
+          <div><b>0</b><span>UI libraries — one hand-built design system</span></div>
+        </div>
+        <div class="p-chips">
+          <span class="chip">React</span><span class="chip">ReactFlow</span><span class="chip">Zustand</span><span class="chip">Python · FastAPI</span><span class="chip">Design tokens</span><span class="chip">No UI kit</span>
+        </div>
+        <a class="p-link" href="https://github.com/jchak7/patchbay" target="_blank" rel="noopener">source on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
       </div>
 
       <div class="card p-card p-okay reveal">
@@ -474,7 +498,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 
 <section id="glassbox">
   <div class="wrap">
-    <p class="eyebrow reveal">Newest build — in full</p>
+    <p class="eyebrow reveal">A browser agent — in full</p>
     <h2 class="reveal">GlassBox, every detail.</h2>
     <p class="lede reveal">I kept watching AI agents do impressive things behind a loading spinner, and realised the hard problem isn't autonomy — it's trust. If a person can't see what an agent is doing, they can't correct it, and they won't use it for anything that matters. So I built the agent I'd actually let near real work: one that narrates every decision and hands you the wheel whenever you want it.</p>
 
@@ -535,6 +559,60 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <a href="https://github.com/jchak7/glassbox" target="_blank" rel="noopener">Source on GitHub ↗</a>
         </div>
         <p class="smallnote">Public and inspectable — the repo carries the limitations doc, the adversarial suite and the engineering journal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="patchbay">
+  <div class="wrap">
+    <p class="eyebrow reveal">Latest build — in full</p>
+    <h2 class="reveal">Patchbay, every detail.</h2>
+    <p class="lede reveal">Tools like this are how non-technical people are starting to build with AI — drag boxes onto a canvas, wire them together, and a workflow runs. I wanted to build one properly, and the interesting problem isn't the dragging. It's that a real version of this has dozens of node types, and if every one is a hand-written component the thing collapses under its own weight. So I built the layer underneath: a way to describe a node as data, and have it become a working node on its own.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>What it does <span class="tag">PRODUCT</span></h3>
+        <ul class="kv">
+          <li><b>Drag a node out, wire the ports.</b> Inputs, an LLM, filters, an HTTP request, free-text notes — drop them on the canvas and connect one to the next.</li>
+          <li><b>The text node is the clever one.</b> Write <code>{{ topic }}</code> inside a prompt and a matching input port <em>appears on the node</em>, ready to wire — so a prompt template becomes a set of connections. It only accepts real variable names, and the box grows as you type.</li>
+          <li><b>Submit checks the wiring.</b> Before a pipeline can run it's sent to the backend, which reports how many nodes and connections it has and whether the graph is valid — <em>a pipeline that loops back on itself can never finish, so that's caught and explained in plain words.</em></li>
+        </ul>
+        <div class="verdict"><b>~8 lines</b><span>of a single object is all it takes to add a brand-new node type — no new component, no new file</span></div>
+      </div>
+
+      <div class="card d-card reveal">
+        <h3>The abstraction — the actual work <span class="tag">ARCHITECTURE</span></h3>
+        <ul class="kv">
+          <li><b>A node is described as data</b>, not code: its title, its fields, its ports, its colour, all in one small object.</li>
+          <li><b>A shared factory turns that object into a React component</b> wired to the store, and a shared shell draws the card and lays out the ports. No node ever hand-places a connection point.</li>
+          <li><b>One registry is the single source of truth</b> — it drives the node types, the toolbar and the styling together. Add one entry and the node appears everywhere at once.</li>
+          <li><b>Ports can be dynamic.</b> The text node's inputs are a function of what you've typed, which is how <code>{{ variables }}</code> become live connection points without the framework knowing anything about templates.</li>
+          <li><b>Front end React + ReactFlow + Zustand</b>; backend <b>Python + FastAPI</b> running a real graph check (Kahn's algorithm) that survives self-loops, duplicate edges and edges pointing at deleted nodes.</li>
+        </ul>
+      </div>
+
+      <div class="card d-card full reveal">
+        <h3>Designed as a product, not a demo <span class="tag">DESIGN</span></h3>
+        <p class="qbig">For a tool aimed at non-technical people, the interface <em>is</em> the product — so it got a real design system, not a stylesheet.</p>
+        <ul class="kv">
+          <li><b>A dark canvas tool</b> in the register of Linear and n8n: every node accent, every border, every shadow is a design token, so recolouring the whole app is one file.</li>
+          <li><b>Nine hand-drawn SVG icons</b> on a single grid and stroke weight, each taking its node's colour automatically — no icon fonts, no emoji.</li>
+          <li><b>The result reads as words first.</b> Instead of a raw browser alert, a floating panel says “Pipeline looks valid” or “This pipeline has a cycle,” with the counts underneath and a colour that matches the outcome.</li>
+          <li><b>Motion with a purpose</b> — nodes settle in when dropped, ports glow on hover, edges animate — all of it switched off for anyone who prefers reduced motion.</li>
+        </ul>
+        <div class="tiles">
+          <div class="tile"><b>9</b><span>node types, one shared abstraction</span></div>
+          <div class="tile"><b>DAG</b><span>validated on the backend before a run</span></div>
+          <div class="tile"><b>0</b><span>UI libraries — the design system is hand-built</span></div>
+          <div class="tile"><b>{{ }}</b><span>prompt variables become live input ports</span></div>
+          <div class="tile"><b>Tokens</b><span>restyle the entire app from one file</span></div>
+          <div class="tile"><b>SVG</b><span>icon set drawn on one grid, theme-aware</span></div>
+        </div>
+        <div class="linkrow">
+          <a class="primary" href="https://github.com/jchak7/patchbay" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+        <p class="smallnote">A full-stack build — React front end, hand-built design system, and a FastAPI backend that validates the graph before it runs.</p>
       </div>
     </div>
   </div>
@@ -829,7 +907,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   }, {passive:true});
 
   /* typewriter roles */
-  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","Built GlassBox — a steerable browser agent","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
+  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","Built GlassBox — a steerable browser agent","Built Patchbay — a visual pipeline builder","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
   var el = document.getElementById("roleText"), ri=0, ci=0, del=false;
   function type(){
     var w = roles[ri];
