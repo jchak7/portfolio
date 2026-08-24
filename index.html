@@ -167,6 +167,8 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .m-lead{background:linear-gradient(135deg,#334155,#64748B)}
 .m-glass{background:linear-gradient(135deg,#10B981,#06B6D4)}
 .m-patch{background:linear-gradient(135deg,#6366F1,#A855F7)}
+.m-post{background:linear-gradient(135deg,#F59E0B,#F43F5E)}
+.p-post{grid-column:span 12}
 .p-name{font-family:var(--font-d);font-weight:700;font-size:22px}
 .p-tag{font-size:13.5px;color:var(--mute)}
 .badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -307,6 +309,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <a href="#elyxis">Elyxis</a>
       <a href="#glassbox">GlassBox</a>
       <a href="#patchbay">Patchbay</a>
+      <a href="#postmark">Postmark</a>
       <a href="#imokay">I'm Okay</a>
       <a href="#build">Paxel</a>
       <a href="#amazon">Amazon</a>
@@ -347,7 +350,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
     </div>
     <div class="hero-stats">
       <div class="stat reveal"><b><em data-count="4.5">0</em>+ yrs</b><span>QA at Amazon — Appstore &amp; Fire TV</span></div>
-      <div class="stat reveal"><b><em data-count="4">0</em> products</b><span>designed, built &amp; shipped end-to-end</span></div>
+      <div class="stat reveal"><b><em data-count="5">0</em> products</b><span>designed, built &amp; shipped end-to-end</span></div>
       <div class="stat reveal"><b><em data-count="40">0</em> languages</b><span>built into I'm Okay — Android &amp; iOS</span></div>
       <div class="stat reveal"><b><em data-count="28">0</em>K followers</b><span>LinkedIn audience built from zero</span></div>
     </div>
@@ -356,7 +359,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 <section id="work">
   <div class="wrap">
     <p class="eyebrow reveal">Founder products</p>
-    <h2 class="reveal">Four products, end to end.<br>All built to tell the truth.</h2>
+    <h2 class="reveal">Five products, end to end.<br>All built to tell the truth.</h2>
     <p class="lede reveal">Designed, engineered and tested end-to-end — with Claude Code as my AI pair-programmer, and QA discipline from four-plus years at Amazon baked into every release.</p>
 
     <div class="bento">
@@ -416,6 +419,24 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <span class="chip">React</span><span class="chip">ReactFlow</span><span class="chip">Zustand</span><span class="chip">Python · FastAPI</span><span class="chip">Design tokens</span><span class="chip">No UI kit</span>
         </div>
         <a class="p-link" href="https://github.com/jchak7/patchbay" target="_blank" rel="noopener">source on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+
+      <div class="card p-card p-post reveal">
+        <div class="p-top">
+          <div class="p-mark m-post">Pm</div>
+          <div><div class="p-name">Postmark</div><div class="p-tag">An evidence layer for a job search</div></div>
+          <div class="badges"><span class="badge hot">Zero dependencies</span><span class="badge">Local-first</span></div>
+        </div>
+        <p class="p-desc">Every job-search tool computes its metrics from a date a human typed in from memory. Meanwhile the employer's own confirmation email — the one externally attested timestamp in the whole pipeline — sits unread in the inbox. Postmark picks it up: <em>receipts with the employer's timestamp</em>, an honest transition ledger every status change must pass through, a manual-apply queue, and BM25 recall over past application answers so the next form starts from what you already wrote. Runs on your laptop, reads your own files, <em>sends nothing anywhere</em>. Built beside career-ops, the open-source job-search agent I contribute to.</p>
+        <div class="p-stats">
+          <div><b>192</b><span>automated tests — no test framework</span></div>
+          <div><b>0</b><span>runtime dependencies — Node 20 and nothing else</span></div>
+          <div><b>127.0.0.1</b><span>the only address it will ever bind</span></div>
+          <div><b>BM25</b><span>answer recall over everything you've written</span></div>
+        </div>
+        <div class="p-chips">
+          <span class="chip">Node.js</span><span class="chip">Zero deps</span><span class="chip">NDJSON live streaming</span><span class="chip">BM25</span><span class="chip">Local-first</span>
+        </div>
       </div>
 
       <div class="card p-card p-okay reveal">
@@ -566,7 +587,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 
 <section id="patchbay">
   <div class="wrap">
-    <p class="eyebrow reveal">Latest build — in full</p>
+    <p class="eyebrow reveal">Deep dive</p>
     <h2 class="reveal">Patchbay, every detail.</h2>
     <p class="lede reveal">Tools like this are how non-technical people are starting to build with AI — drag boxes onto a canvas, wire them together, and a workflow runs. I wanted to build one properly, and the interesting problem isn't the dragging. It's that a real version of this has dozens of node types, and if every one is a hand-written component the thing collapses under its own weight. So I built the layer underneath: a way to describe a node as data, and have it become a working node on its own.</p>
 
@@ -613,6 +634,37 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
           <a class="primary" href="https://github.com/jchak7/patchbay" target="_blank" rel="noopener">Source on GitHub ↗</a>
         </div>
         <p class="smallnote">A full-stack build — React front end, hand-built design system, and a FastAPI backend that validates the graph before it runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="postmark">
+  <div class="wrap">
+    <p class="eyebrow reveal">Latest build — in full</p>
+    <h2 class="reveal">Postmark, every detail.</h2>
+    <p class="lede reveal">Open any job-search tracker and ask where the "Applied" date comes from. A human typed it, from memory — and every metric downstream (time-to-response, median reply time) is built on that guess and quoted as fact. The employer sent a confirmation email the moment they received the application, carrying <em>their</em> timestamp. Postmark is built around the idea that the externally attested date is the only one worth computing on.</p>
+
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>What it does <span class="tag">PRODUCT</span></h3>
+        <ul class="kv">
+          <li><b>Receipts, not recollections.</b> Employer confirmation emails become receipts with the employer's own timestamp — proof of delivery for every application, instead of a date typed in later.</li>
+          <li><b>An honest transition ledger.</b> Every status change passes through one append-only ledger with a declared source — <code>set-status</code>, <code>correction</code>, <code>backfill</code>, <code>manual</code> — so a corrected date can never silently masquerade as an observed one.</li>
+          <li><b>Answer recall.</b> BM25 search over everything already written in past applications, so the next form starts from your best previous answer rather than a blank box.</li>
+          <li><b>Live, stoppable runs.</b> Long scans stream their output line by line (NDJSON) with a working Stop button — a three-minute job is watchable, not a spinner followed by a wall of text.</li>
+        </ul>
+        <div class="verdict"><b>192</b><span>automated tests on Node's built-in runner — no test framework, nothing to install</span></div>
+      </div>
+
+      <div class="card d-card reveal">
+        <h3>Built like it handles your mail — because it does <span class="tag">ENGINEERING</span></h3>
+        <ul class="kv">
+          <li><b>Zero runtime dependencies.</b> Node 20 and nothing else; <code>npm install</code> has nothing to install. No supply chain to audit, nothing to rot.</li>
+          <li><b>Local-first, by construction.</b> Binds <code>127.0.0.1</code> only, reads your own files, sends nothing anywhere. The privacy claim is an architecture, not a policy page.</li>
+          <li><b>Sits beside career-ops</b>, the 63k-star open-source job-search agent — Postmark picks up the employer-timestamp evidence that career-ops detects and then drops, one line before it becomes useful.</li>
+          <li><b>Tested at the seams:</b> the ledger, the queue, the receipt parser, the tracker sync and the agent's Stop path each carry their own suite — 192 assertions, all green, verified on every release.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -711,6 +763,26 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <li><b>Measured by:</b> YC's Paxel and Standout — the telemetry above, from two independent tools. The discipline is the product.</li>
       </ul>
       <p class="qbig">For the past year and a half, every line I've shipped has had an AI agent in the loop. I'm not going back — <em>I only want to work AI-native.</em></p>
+    </div>
+
+    <div class="panel reveal" style="margin-top:18px">
+      <h3 style="margin-bottom:10px">Merged upstream <span class="tag">OPEN SOURCE</span></h3>
+      <p class="lede reveal" style="margin-bottom:14px">My first contribution to a major open-source project: career-ops, a 63,000-star job-search agent. The PR adds the parser its formatter never had — and the review made it better than what I submitted.</p>
+      <div class="tiles">
+        <div class="tile"><b>+580</b><span>lines merged — parser + 402 lines of tests</span></div>
+        <div class="tile"><b>10</b><span>assertions, in the project's own house style</span></div>
+        <div class="tile"><b>63k★</b><span>stars on the repo it landed in</span></div>
+        <div class="tile"><b>3</b><span>reviewers answered — two maintainers and a bot</span></div>
+      </div>
+      <div class="profile-rows" style="margin-top:14px">
+        <div class="row"><b>The claim is the interesting part:</b> the formatter is lossy by design, so the PR asserts a fixed-point property — parse(format(x)) is stable after one normalisation pass — instead of a round-trip equality that would be false.</div>
+        <div class="row"><b>Review made it stronger:</b> the maintainer asked what happens on unreadable input; the answer became an opt-in strict mode that refuses with named lines rather than returning a silently incomplete snapshot. A review bot then caught that my fix missed one parser — I fixed it, said so plainly in the thread, and pinned it with a mutation test.</div>
+        <div class="row"><b>Every new assertion earns its place:</b> reverting a fix has to kill exactly that assertion and nothing else — verified by running the mutants, not by claiming it.</div>
+      </div>
+      <div class="linkrow">
+        <a class="primary" href="https://github.com/santifer/career-ops/pull/2809" target="_blank" rel="noopener">Read the PR and the review thread ↗</a>
+      </div>
+      <p class="src">MERGED AUG 18, 2026 · SANTIFER/CAREER-OPS · FIRST-TIME CONTRIBUTOR</p>
     </div>
   </div>
 </section>
@@ -856,7 +928,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <p class="eyebrow" style="justify-content:center">Contact</p>
       <h2>Let's build something honest.</h2>
       <p class="lede" style="margin-inline:auto">I fit anywhere in engineering: <b>backend, full-stack, mobile, QA &amp; test automation, tooling</b>. Open to remote work anywhere; willing to relocate — US (needs visa sponsorship), UK, Dubai / UAE, Australia, New Zealand, Canada, or Delhi. <b>One non-negotiable: I build AI-native.</b> For the past 1.5 years every line I've shipped has had AI agents in the loop, and I'm looking for teams that work the same way. What stays the same wherever I land: tests green before merge, claims the product can back, and things that actually ship.</p>
-      <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built four products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
+      <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built five products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
       <div class="contact-ctas">
         <a class="btn btn-primary" href="mailto:jchakjobs7@gmail.com">jchakjobs7@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/jaychak/" target="_blank" rel="noopener">LinkedIn</a>
