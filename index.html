@@ -169,6 +169,19 @@ h1 .grad{background:linear-gradient(92deg,var(--accent) 10%,var(--accent2) 90%);
 .m-patch{background:linear-gradient(135deg,#6366F1,#A855F7)}
 .m-post{background:linear-gradient(135deg,#F59E0B,#F43F5E)}
 .p-post{grid-column:span 12}
+.p-cue{grid-column:span 12}
+.m-cue{background:linear-gradient(135deg,#7C3AED,#EC4899)}
+.p-cue::before{content:"";position:absolute;top:-130px;right:-70px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,#7C3AED 18%,transparent),transparent 70%);pointer-events:none}
+.pr-list{display:grid;gap:10px;margin-top:14px;position:relative}
+.pr{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:14px 16px;border:1px solid var(--border);border-radius:14px;background:color-mix(in srgb,var(--bg) 45%,transparent)}
+.pr .st{font-family:var(--font-m);font-size:10.5px;letter-spacing:.08em;padding:4px 9px;border-radius:999px;align-self:start;white-space:nowrap}
+.pr .st.m{color:#fff;background:linear-gradient(135deg,#8B5CF6,#6366F1)}
+.pr .st.o{color:#34D399;border:1px solid rgba(52,211,153,.4)}
+.pr .t{font-weight:600}
+.pr .t a{color:var(--accent)}
+.pr .d{grid-column:2;font-size:13.5px;color:var(--ink2)}
+@media(max-width:600px){.pr{grid-template-columns:1fr}.pr .d{grid-column:1}}
 .p-name{font-family:var(--font-d);font-weight:700;font-size:22px}
 .p-tag{font-size:13.5px;color:var(--mute)}
 .badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -308,10 +321,10 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <a href="#work">Products</a>
       <a href="#elyxis">Elyxis</a>
       <a href="#glassbox">GlassBox</a>
-      <a href="#patchbay">Patchbay</a>
-      <a href="#postmark">Postmark</a>
+      <a href="#cue">Cue</a>
       <a href="#imokay">I'm Okay</a>
       <a href="#build">Paxel</a>
+      <a href="#oss">Open source</a>
       <a href="#amazon">Amazon</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -328,7 +341,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <p class="hello">Bengaluru, India · QA engineer by day, founder by night</p>
         <h1>I build honest<br>consumer products.<br><span class="grad">And I test everything.</span></h1>
         <p class="roles"><span id="roleText"></span><span class="caret"></span></p>
-        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>, and the builder of <strong>GlassBox</strong>, a browser agent you can watch and steer, and <strong>Patchbay</strong>, a visual pipeline builder. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
+        <p class="hero-p">I'm <strong>Jay Chak</strong> — Quality Assurance Engineer at <strong>Amazon</strong> (Appstore &amp; Fire TV) and founder of <strong>Elyxis</strong>, <strong>I'm Okay</strong> and <strong>LeadShala</strong>, and the builder of <strong>GlassBox</strong>, a browser agent you can watch and steer, <strong>Patchbay</strong>, a visual pipeline builder, and <strong>Cue</strong>, a real-time AI call copilot now in build — plus open-source PRs merged into career-ops and Signadot. I care a lot about products telling the truth — my flagship app is built to say <em>"this didn't work for you"</em> when that's what the data shows.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://jchak7.github.io/portfolio/Jay_Chak_Resume.pdf" download="Jay_Chak_Resume.pdf" target="_blank" rel="noopener">Download résumé
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
@@ -359,7 +372,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 <section id="work">
   <div class="wrap">
     <p class="eyebrow reveal">Founder products</p>
-    <h2 class="reveal">Five products, end to end.<br>All built to tell the truth.</h2>
+    <h2 class="reveal">Six products, end to end.<br>All built to tell the truth.</h2>
     <p class="lede reveal">Designed, engineered and tested end-to-end — with Claude Code as my AI pair-programmer, and QA discipline from four-plus years at Amazon baked into every release.</p>
 
     <div class="bento">
@@ -437,6 +450,25 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <div class="p-chips">
           <span class="chip">Node.js</span><span class="chip">Zero deps</span><span class="chip">NDJSON live streaming</span><span class="chip">BM25</span><span class="chip">Local-first</span>
         </div>
+      </div>
+
+      <div class="card p-card p-cue reveal">
+        <div class="p-top">
+          <div class="p-mark m-cue">Cu</div>
+          <div><div class="p-name">Cue</div><div class="p-tag">A real-time AI copilot for meetings, sales calls and interview prep</div></div>
+          <div class="badges"><span class="badge hot">In build</span><span class="badge">Team-led</span></div>
+        </div>
+        <p class="p-desc">Cue listens to a live call, transcribes it as it happens, spots the question being asked, pulls in context from your résumé, job description and documents, and streams a suggested answer into an overlay — targeting <em>under 2.5 seconds to first token</em>. The difference is an <em>incremental pipeline</em>: intent detection and context prefetch start on the partial transcript, not after the question ends. It's <em>consent-first by spec</em>: a normal overlay window, with no proctoring bypass and no "undetectable" claims. I'm leading the build with a team and AI agents.</p>
+        <div class="p-stats">
+          <div><b>2 days</b><span>Wave-0 foundation · 23 commits</span></div>
+          <div><b>15</b><span>phases in the Build Bible</span></div>
+          <div><b>&lt;2.5 s</b><span>time-to-first-token target</span></div>
+          <div><b>1 ticket</b><span>= 1 branch = 1 PR, CI-gated</span></div>
+        </div>
+        <div class="p-chips">
+          <span class="chip">TypeScript · Turborepo + pnpm</span><span class="chip">WebSocket realtime gateway</span><span class="chip">Multi-provider model gateway</span><span class="chip">Streaming STT + failover</span><span class="chip">Postgres + pgvector · Redis</span><span class="chip">Prisma</span>
+        </div>
+        <a class="p-link" href="#cue">the architecture ↓</a>
       </div>
 
       <div class="card p-card p-okay reveal">
@@ -670,6 +702,50 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   </div>
 </section>
 
+<section id="cue">
+  <div class="wrap">
+    <p class="eyebrow reveal">In build — the newest</p>
+    <h2 class="reveal">Cue, every detail.</h2>
+    <p class="lede reveal">A real-time AI copilot for live calls: meetings, sales calls, interview practice. The category leader proved people want it. I'm building an independent version on my own code, infrastructure and models, and running it the way I'd want a team to run it.</p>
+    <div class="deep-grid">
+      <div class="card d-card reveal">
+        <h3>The pipeline <span class="tag">REAL-TIME</span></h3>
+        <ul class="kv">
+          <li><b>Audio in:</b> mic, browser tab or system audio → 16-bit PCM chunks → voice-activity detection drops silence.</li>
+          <li><b>Streaming speech-to-text</b> behind one provider interface, with <b>failover inside a single utterance</b>. The category leader's worst outage came from depending on one STT vendor.</li>
+          <li><b>Question detection → context engine → model gateway → answer streamed over SSE</b>, all from the user's own résumé and documents.</li>
+          <li><b>Incremental by design:</b> intent detection and context prefetch start on the <em>partial</em> transcript, so the answer is already warming up when the question ends. None of the five reference repos I studied does this.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Wave 0 — shipped in two days <span class="tag">FOUNDATION</span></h3>
+        <ul class="kv">
+          <li><b>Monorepo:</b> Turborepo + pnpm TypeScript, shared lint/tsconfig/Tailwind, CI gates, branch protection, CODEOWNERS and a PR template.</li>
+          <li><b>Realtime gateway:</b> authenticated WebSocket with heartbeat, a session state store, and a published session-channel and launch-token contract.</li>
+          <li><b>Model gateway:</b> provider adapters, our own model tiers (Flash / Swift / Core / Deep, never vendor names), a question router, and per-user budget, metering and pricing.</li>
+          <li><b>Plumbing:</b> Zod env registry and secrets policy, Postgres 16 + pgvector and Redis 7 dev stack, palette-gated design tokens, privacy defaults, and a Prisma data model for Phase 1.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Run like a real team <span class="tag">PROCESS</span></h3>
+        <ul class="kv">
+          <li><b>A Build Bible</b> with a 15-phase roadmap, a numbered decision log, a competitive blueprint and a dashboard map, so no agent or teammate has to guess.</li>
+          <li><b>A squad-by-squad ticket backlog</b> plus onboarding and kickoff prompts, so people and AI agents build in parallel.</li>
+          <li><b>One ticket = one branch = one PR</b>, merged only on green CI. Anything the spec doesn't define is raised as a <b>BLOCKER</b> and never improvised.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>The boundary is in the spec <span class="tag">TRUST</span></h3>
+        <ul class="kv">
+          <li><b>Consent-first:</b> a normal always-on-top overlay with standard OS permissions. Nothing that bypasses proctoring, monitoring or capture detection gets built, and "undetectable" is banned from UI, README and docs.</li>
+          <li><b>Privacy by default:</b> audio is transcribed and then discarded, with retention TTLs and a deletion cascade. Provider keys stay server-side, and every STT-second and token is cost-logged per user.</li>
+          <li><b>Next:</b> auth and accounts, streaming STT, then the browser vertical slice end to end. After that, native desktop capture on macOS and Windows.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="imokay">
   <div class="wrap">
     <p class="eyebrow reveal">Shipped first</p>
@@ -765,25 +841,34 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <p class="qbig">For the past year and a half, every line I've shipped has had an AI agent in the loop. I'm not going back — <em>I only want to work AI-native.</em></p>
     </div>
 
-    <div class="panel reveal" style="margin-top:18px">
-      <h3 style="margin-bottom:10px">Merged upstream <span class="tag">OPEN SOURCE</span></h3>
-      <p class="lede reveal" style="margin-bottom:14px">My first contribution to a major open-source project: career-ops, a 63,000-star job-search agent. The PR adds the parser its formatter never had — and the review made it better than what I submitted.</p>
+    <div class="panel reveal" id="oss" style="margin-top:18px">
+      <h3 style="margin-bottom:10px">Open source <span class="tag">3 MERGED · 4 IN REVIEW</span></h3>
+      <p class="lede reveal" style="margin-bottom:14px">I read other people's code closely, find the bug nobody filed, and send a fix scoped so a maintainer can merge it. So far that's seven PRs across six projects, from a 72,000-star agent to a YC company's SDK.</p>
       <div class="tiles">
-        <div class="tile"><b>+580</b><span>lines merged — parser + 402 lines of tests</span></div>
-        <div class="tile"><b>10</b><span>assertions, in the project's own house style</span></div>
-        <div class="tile"><b>63k★</b><span>stars on the repo it landed in</span></div>
-        <div class="tile"><b>3</b><span>reviewers answered — two maintainers and a bot</span></div>
+        <div class="tile"><b>3</b><span>PRs merged upstream: career-ops ×2, Signadot</span></div>
+        <div class="tile"><b>4</b><span>in review: Moss, SigNoz, WarpBuild ×2</span></div>
+        <div class="tile"><b>+5,481</b><span>lines in the Moss Obsidian plugin</span></div>
+        <div class="tile"><b>72k★</b><span>career-ops, where two PRs landed</span></div>
       </div>
-      <div class="profile-rows" style="margin-top:14px">
-        <div class="row"><b>The claim is the interesting part:</b> the formatter is lossy by design, so the PR asserts a fixed-point property — parse(format(x)) is stable after one normalisation pass — instead of a round-trip equality that would be false.</div>
-        <div class="row"><b>Review made it stronger:</b> the maintainer asked what happens on unreadable input; the answer became an opt-in strict mode that refuses with named lines rather than returning a silently incomplete snapshot. A review bot then caught that my fix missed one parser — I fixed it, said so plainly in the thread, and pinned it with a mutation test.</div>
-        <div class="row"><b>Every new assertion earns its place:</b> reverting a fix has to kill exactly that assertion and nothing else — verified by running the mutants, not by claiming it.</div>
+      <div class="pr-list">
+        <div class="pr"><span class="st m">MERGED</span><div class="t"><a href="https://github.com/career-ops-hq/career-ops/pull/2809" target="_blank" rel="noopener">career-ops #2809</a> · the parser its formatter never had</div>
+          <div class="d">+580 lines, including 402 lines of tests, reviewed by two maintainers and CodeRabbit. The formatter is lossy by design, so the PR asserts a fixed-point property (parse(format(x)) is stable after one pass) instead of a round-trip equality that would be false. The review added an opt-in strict mode that refuses unreadable input and names each bad line. Every fix is pinned by a mutation test.</div></div>
+        <div class="pr"><span class="st m">MERGED</span><div class="t"><a href="https://github.com/career-ops-hq/career-ops/pull/3230" target="_blank" rel="noopener">career-ops #3230</a> · the follow-up the maintainer asked for</div>
+          <div class="d">The merge message on #2809 invited the wiring, so apply mode now recovers previous answers through a <code>--read --strict</code> CLI seam instead of re-reading prose. A new test section pins the contract.</div></div>
+        <div class="pr"><span class="st m">MERGED</span><div class="t"><a href="https://github.com/signadot/cli/pull/364" target="_blank" rel="noopener">signadot/cli #364</a> · carriage returns leaking into the terminal (Go)</div>
+          <div class="d">In <code>--attach</code> text output, a CRLF log line left a bare <code>\r</code> behind and the next write overwrote the line. The fix trims <code>\r\n</code> and quotes embedded <code>\r</code>, matching JSON mode. It ships with 60 lines of tests.</div></div>
+        <div class="pr"><span class="st o">IN REVIEW</span><div class="t"><a href="https://github.com/usemoss/moss/pull/513" target="_blank" rel="noopener">usemoss/moss #513</a> · moss-obsidian, local-first semantic search (YC F25)</div>
+          <div class="d">An Obsidian plugin across 30 files. It does hybrid semantic + BM25 search over a vault, and Enter jumps to the matching section, not just the note. Chunking is heading-aware, with breadcrumbs and CommonMark-correct fences. The native runtime is isolated in a worker process so a native fault can't take down Obsidian.</div></div>
+        <div class="pr"><span class="st o">IN REVIEW</span><div class="t"><a href="https://github.com/WarpBuilds/snapshot-save/pull/89" target="_blank" rel="noopener">WarpBuilds/snapshot-save #89</a> · the wrong image could be updated</div>
+          <div class="d">The lookup trusted the first alias the API returned, so a query for <code>my-image</code> could act on <code>my-image-arm64</code>. The fix selects by exact alias match.</div></div>
+        <div class="pr"><span class="st o">IN REVIEW</span><div class="t"><a href="https://github.com/SigNoz/signoz.io/pull/4242" target="_blank" rel="noopener">SigNoz docs #4242</a> · every app's telemetry was labelled as the collector</div>
+          <div class="d">In the ECS-on-EC2 daemon guide, the detector read the collector's own task metadata. The fix moves ECS detection to the app's SDK and corrects two adjacent config errors.</div></div>
+        <div class="pr"><span class="st o">IN REVIEW</span><div class="t"><a href="https://github.com/WarpBuilds/action-debugger/pull/24" target="_blank" rel="noopener">WarpBuilds/action-debugger #24</a> · watching a GUI session live</div>
+          <div class="d">tmate can't forward X11, so the PR documents the working route: Xvfb, then x11vnc on loopback, then noVNC. I also filed <a href="https://github.com/metorial/metorial/issues/134" target="_blank" rel="noopener">metorial #134</a>, a CONTRIBUTING.md rewrite checked against the real repo.</div></div>
       </div>
-      <div class="linkrow">
-        <a class="primary" href="https://github.com/santifer/career-ops/pull/2809" target="_blank" rel="noopener">Read the PR and the review thread ↗</a>
-      </div>
-      <p class="src">MERGED AUG 18, 2026 · SANTIFER/CAREER-OPS · FIRST-TIME CONTRIBUTOR</p>
+      <p class="src">LIVE STATUS ON GITHUB · AUTHOR: JCHAK7</p>
     </div>
+  </div>
   </div>
 </section>
 <section id="amazon">
@@ -794,7 +879,26 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
 
     <div class="deep-grid">
       <div class="card d-card reveal">
-        <h3>Competitive parity &amp; performance benchmarking <span class="tag">FLAGSHIP</span></h3>
+        <h3>Hawkeye — agentic IP-infringement analyzer <span class="tag">BUILT · AGENTIC AI</span></h3>
+        <ul class="kv">
+          <li>Takes <b>one app identifier</b>, pulls the full listing record (developer, title, description, artwork, package name, prior reviewer notes) from an internal catalog service behind SSO, and investigates whether the submitter actually owns or is licensed to distribute the app.</li>
+          <li>Checks: cross-store comparison, <b>reverse-image provenance</b> on every icon and promo asset, developer-identity and website triangulation, a keyword-and-title policy audit, and <b>live trademark-register lookups (USPTO, WIPO Global Brand Database)</b> matched to the app's marketplaces.</li>
+          <li>Returns an <b>evidence-backed verdict</b> (Likely Infringement / Rights Established / Inconclusive) with click-to-verify proof for every finding and a generated PDF. A specialist's <b>30–60 minute review now takes ~2.5–4 minutes</b>.</li>
+          <li><b>Three engines, one policy playbook:</b> Fast runs a parallel evidence graph with four concurrent LLM judges and a first-strike early exit. Deep Search is an autonomous browser agent (up to 320 plan-act-observe steps) that narrates each step and can be paused, steered or set to approve-each-step. Bulk runs up to 500 apps through a worker pool, escalating Fast to Deep automatically, with retries and resume after restart.</li>
+          <li><b>Stack:</b> Python, FastAPI and asyncio driving Playwright; a React + TypeScript console with a live WebSocket feed; Claude Opus + Sonnet on Amazon Bedrock behind an adaptive throttle gate, prompt caching and truncation-aware retries. Deterministic verdict-integrity guards sit in code above the model output, backed by 100+ behavioral checks and a known-truth regression harness.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Pulse — live audit workspace <span class="tag">BUILT · REPLACED EXCEL</span></h3>
+        <ul class="kv">
+          <li>Replaced the team's <b>two regional weekly Excel workbooks</b> for Policy, Functional and Feature app audits with a real-time web tool.</li>
+          <li>Admins upload each week's workbooks into region-tagged sheets and grant <b>per-sheet, per-tester access</b>. Testers work in a <b>spreadsheet-grade editable grid</b>: inline picklists, per-block assignment, Excel-style cell addresses and <b>full cell-level history</b> (who changed what, when, old → new).</li>
+          <li>Weeks can be locked, and every edit <b>syncs live across concurrent editors over WebSockets</b>. There's an admin dashboard, filters, cross-week history lookup and styled Excel export.</li>
+          <li><b>Stack:</b> Python, FastAPI and SQLAlchemy (SQLite in dev, PostgreSQL in prod) with JWT auth and role-based access, and a React + TypeScript + Tailwind frontend. An importer brought in <b>six months of history (~10,000 audit rows)</b>. It has <b>120+ automated tests</b> and a Docker → AWS (ECR, App Runner, RDS) deployment kit.</li>
+        </ul>
+      </div>
+      <div class="card d-card reveal">
+        <h3>Competitive parity &amp; performance benchmarking <span class="tag">BENCHMARKING</span></h3>
         <ul class="kv">
           <li>Benchmarked <b>75+ top streaming apps</b> on Fire TV against <b>Apple TV, Google TV and Roku</b> across five quarterly cycles — end-to-end: launch, Live TV, voice, universal search, sign-in, discoverability, IAP parity.</li>
           <li>Logged <b>350+ customer-experience disparities</b>, <b>60+ of them P0</b>, tracked in JIRA with the platform team; fixes landed in-quarter.</li>
@@ -839,7 +943,6 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         </ul>
       </div>
     </div>
-    <p class="smallnote reveal">Internal program codenames and confidential figures are deliberately left off this public page; the full picture with sourcing lives in my résumé and interview answers.</p>
   </div>
 </section>
 
@@ -852,6 +955,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
         <div class="t-head"><span class="t-role">Quality Assurance Engineer</span><span class="t-co">Amazon · Appstore &amp; Fire TV</span><span class="t-date">FEB 2022 — PRESENT</span></div>
         <p class="t-body">Functional, policy and compliance testing across Amazon's app ecosystem — Appstore, Fire TV and tablets.</p>
         <ul class="t-points">
+          <li>Designed and built <b>Hawkeye</b>, an agentic-AI IP-infringement analyzer (Claude on Bedrock, Playwright browser agent) that cuts a 30–60 minute review to ~3 minutes, and <b>Pulse</b>, a real-time audit workspace that replaced the team's weekly Excel workbooks.</li>
           <li>Competitive parity benchmarking of top streaming apps against Apple TV, Google TV and Roku — 350+ experience gaps logged and triaged with platform teams over five quarterly cycles.</li>
           <li>Daily quality ownership of 300+ live streaming channels: playback health, ingestion SLAs, content-freshness validation.</li>
           <li>Policy audits and tester coaching, third-party developer support, and contributions to the team's UI-automation initiative.</li>
@@ -928,7 +1032,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
       <p class="eyebrow" style="justify-content:center">Contact</p>
       <h2>Let's build something honest.</h2>
       <p class="lede" style="margin-inline:auto">I fit anywhere in engineering: <b>backend, full-stack, mobile, QA &amp; test automation, tooling</b>. Open to remote work anywhere; willing to relocate — US (needs visa sponsorship), UK, Dubai / UAE, Australia, New Zealand, Canada, or Delhi. <b>One non-negotiable: I build AI-native.</b> For the past 1.5 years every line I've shipped has had AI agents in the loop, and I'm looking for teams that work the same way. What stays the same wherever I land: tests green before merge, claims the product can back, and things that actually ship.</p>
-      <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built five products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
+      <p class="lede" style="margin-inline:auto;margin-top:14px">I work at Amazon by day; nights and weekends I built six products end to end, solo, with Claude Code as my pair-programmer. <b>I am the evidence for my own thesis: one person with modern AI tooling can build what used to take a team.</b></p>
       <div class="contact-ctas">
         <a class="btn btn-primary" href="mailto:jchakjobs7@gmail.com">jchakjobs7@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/jaychak/" target="_blank" rel="noopener">LinkedIn</a>
@@ -979,7 +1083,7 @@ footer{border-top:1px solid var(--border);padding:34px 0 44px;color:var(--mute);
   }, {passive:true});
 
   /* typewriter roles */
-  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","Built GlassBox — a steerable browser agent","Built Patchbay — a visual pipeline builder","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
+  var roles = ["Quality Assurance Engineer @ Amazon","Founder — Elyxis (YC F2026 applicant)","Building I'm Okay — 40 languages","Built GlassBox — a steerable browser agent","Built Patchbay — a visual pipeline builder","Building Cue — a real-time AI call copilot","Open source — PRs merged upstream","AI-native builder — 1.5 years, AI-only","Open to backend & full-stack roles"];
   var el = document.getElementById("roleText"), ri=0, ci=0, del=false;
   function type(){
     var w = roles[ri];
